@@ -1,0 +1,270 @@
+html{
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, 
+    Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    font-size: 1rem;
+    margin: 0;
+    line-height: 1.5;
+}
+a{
+    text-decoration: none;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family:'Belanosima', sans-serif;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========Header*/
+
+/* ==========Header*/
+.header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    color: #fff;
+    z-index: 5;
+
+}
+/* ==========Header*/
+.logo{
+    display: flex;
+ align-items: center;
+ gap: 1rem;
+ justify-content: center;
+ color: #fff;
+}
+.logo-img{
+    width: 50px;
+    height: 50px;
+
+}
+
+.logo-title{
+    font-weight: 400;
+    font-size: 1.8rem;
+}
+.logo-text{
+    font-weight: 700;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.nav-link{
+    color: #fff;
+}
+.header .container{
+    position: relative;
+    height: 150px;
+    display: flex; /*responsivo*/
+    justify-content: center; /*Logo centrado*/
+    align-items: center; /**textos alineados*/
+    flex-direction: column;/* para que aplica como columnas en telefonos*/
+    padding: 0 20px;
+    max-width: 1080px;
+}
+
+/* ==========Hero*/
+.hero{
+    position: relative; /*solo la caja*/
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    background-image: url('vg-hero.jpg');
+    background-size: cover; /* para que la imagen cubra todo el contenifdo o caja*/
+    background-position: center; /*imagen centrada*/
+    justify-content: center; /*centrar contenido*/
+    align-items: center; /*texto centrado*/
+padding-top: 30px;}
+/* ==========Hero*/
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+.hero .container{
+    position: relative;
+    text-align: center;
+    color: #fff;
+    padding: 25px 20px 0;
+    max-width: 1080px;
+
+}
+.hero-title{
+font-family:'Belanosima', sans-serif;
+    font-size:2rem;
+}
+
+/* Blog*/
+
+.blog{
+    padding: 50px 0;
+    max-width: 1080px;
+
+
+}
+.blog-title{
+    font-size: 2rem;
+    text-align: center;
+}
+.articulos{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.article-body{
+    padding: 0 20px 20px;
+
+}
+.article-link{
+    background-color:red;
+    padding: 7px 12px;
+    color: #fff;
+    border-radius: 7px;
+    font-style: 700;
+}
+.article-title{
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+/**parallaz+*/
+.parallax{
+position: relative;
+width: 100%;
+height: 500px;
+background-image: url('https://source.unsplash.com/random/1920×1080/?pets');
+background-attachment: fixed;
+background-size: cover;
+background-position: center;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    color: blue;
+}
+.adoptame{
+    
+    text-align: center;
+}
+.adoptame-title{
+    font-size: 2rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.copy-title{
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: black;
+
+}
+.copy-text{
+    font-weight: 700;
+    
+}
+.copy{
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.nav-footer{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer-link{
+    color: black;
+}
+.footer.container{
+    padding: 0 0 30px;
+    max-width: 1080px;
+
+}
+.adoptame .container{
+    padding:  0 20PX;
+    max-width: 1084px;
+}
+.footer{
+    padding-top: 25px;
+    color: black;
+}
+
+@media screen and (min-width: 678px){
+    .header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav-link{
+     font-size: 1.2rem;
+    }
+
+
+    .hero{
+        min-height: 750px;
+    }
+    .hero-title{
+        font-size: 1.5rem;
+    }
+    .hero-description{
+        font-size: 1.5rem;
+    }
+    .article{
+        display: flex;
+        align-items: center;
+       
+        border-radius: 30px;
+    }
+    .blog .container{
+        padding: 0 20px;
+    }
+    .article-img{
+        width: 50%;
+        height: 400px;
+        border-radius: 25px;
+        overflow: hidden;
+    }
+    .article-img img{
+        width: 50%;
+        height: 400px;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+    .articulos .article:nth-child(even){
+      flex-direction: row-reverse;
+    }
+    .article-body{
+        width: 50%;
+        padding: 0 20px;
+    }
+
+}
+.parallax{
+    height: 1000px;
+}
+@media screen and (min-width:1084px){
+    .header .container, .hero .container, .blog, .adoptame .container, .footer .container{
+        margin: 0 auto;
+    }
+
+}
